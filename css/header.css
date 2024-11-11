@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    $標題區塊
+\*------------------------------------*/
+
+
+nav {
+    background-color: var(--pink);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--brown) 0px 0px 10px;
+}
+
+.navList{
+    max-width: 1000px;
+    padding: 0 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navTitle{
+    color: var(--brown);
+    font-size: var(--fs-s);
+
+}
+.navLinkGroup{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.5%;
+width: 50%;
+}
+
+.navItem{
+
+    letter-spacing: 3px;
+    padding: 0.7em 0;
+}
+
+
+@media (max-width:768px) {
+    nav {
+        display: none;
+    }
+}

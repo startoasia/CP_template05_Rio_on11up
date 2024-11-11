@@ -1,0 +1,212 @@
+/*------------------------------------*\
+    CTA
+\*------------------------------------*/
+
+
+/* 按鈕動畫 */
+
+@keyframes hoverAnim {
+    0% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+    }
+
+    30% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+}
+
+.Link {
+    transition: 0.8s;
+}
+
+.Link span {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px 20px;
+    /* border-radius: 15px; */
+}
+
+.Link span:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(124deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    pointer-events: none;
+    animation-name: hoverAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@media screen and (max-width: 640px) {
+    .Link span:after {
+        animation-duration: 4s;
+    }
+}
+
+@keyframes shakeX {
+
+    0%,
+    100% {
+        transform: translateX(0px);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+
+        transform: translateX(10px);
+    }
+}
+
+@keyframes titleBox {
+    0% {
+        transform: translateX(0);
+    }
+
+    6.5% {
+        transform: translateX(-6px) rotateY(-9deg);
+    }
+
+    18.5% {
+        transform: translateX(5px) rotateY(7deg);
+    }
+
+    31.5% {
+        transform: translateX(-3px) rotateY(-5deg);
+    }
+
+    43.5% {
+        transform: translateX(2px) rotateY(3deg);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width:768px) {
+ 
+@keyframes shakeX {
+
+    0%,
+    100% {
+        transform: translateX(0px);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+
+        transform: translateX(5px);
+    }
+}
+
+
+}
+
+.CTA-BTN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5%;
+    margin-bottom: 5%;
+}
+
+.CTA-BTN img {
+    width: 15%;
+    animation: shakeX 2s infinite ease-in-out;
+}
+
+.titleBox {
+    background-color: var(--light-green);
+    color: var(--light);
+    padding: 5% 10%;
+    border-radius: 10px;
+    font-size: var(--fs-s);
+    animation: titleBox 2s infinite ease-in-out;
+}
+
+@media (max-width:768px) {
+    .titleBox {
+
+        padding: 5% 8%;
+        border-radius: 10px;
+        font-size: var(--fs-normal-big);
+    }
+
+}
+
+
+.CTA_Link {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: var(--fs-s);
+    font-weight: var(--fw-600);
+    transition: all 0.3s;
+    position: relative;
+    border-radius: 15px;
+}
+
+.CTA_Link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 0%;
+    left: 5%;
+    width: 90%;
+    height: 15px;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    transition: all 0.3s;
+}
+
+.CTA_Link:hover {
+    transform: translateY(-15px);
+}
+
+.CTA_Link:hover::after {
+    opacity: 1;
+    transform: translateY(25px);
+}
+
+@media (max-width:768px) {
+    .CTA_Link {
+        font-size: var(--fs-xs);
+    }
+}

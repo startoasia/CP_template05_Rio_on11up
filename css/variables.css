@@ -1,0 +1,72 @@
+:root {
+    /* 常用色號 */
+    --light:  #fff;
+    --dark:   #000000;
+    --pink:   #ff1b9a;
+    --red:    #ff0000;
+    --blue:   #0000FF;
+    --gray:   #868686;
+    --yellow: #fde49c;
+    --brown:  #753704;
+    --orange: #fc9d00;
+    --purple: #800080;
+    --green: #658e35;
+
+    /* 特殊色號 */
+    --special-red:  #d9564f;
+    --light-second: #e0e0e0;
+    --light-green: #5dd74d;
+    --blue-second:  #379cc6;
+    --title-blue:   #4EA1E9;
+    /*
+        若要新增可在自行增加
+        格式: 
+        --自定義名稱: 色碼 ;
+     */
+
+    /* ----------字體--------------- */
+    --fs-family-secondary: 'Noto Serif JP', serif;
+    /* 文字大小 */
+    /* 基礎值為16px */
+    --fs-normal: 16px;
+    /* 16 * 2.5  = 40*/
+    --fs-xxl: calc(var(--fs-normal) *2.5);
+    /* 16 * 2.25 = 36*/
+    --fs-xl:  calc(var(--fs-normal) *2.25);
+    /* 16 * 2    = 32 */
+    --fs-l:   calc(var(--fs-normal) *2);
+    /* 16 * 1.75 = 28 */
+    --fs-m:   calc(var(--fs-normal) *1.75);
+    /* 16 * 1.5  = 24 */
+    --fs-s:   calc(var(--fs-normal) *1.5);
+    /* 16 * 1.25  = 20 */
+    --fs-xs:  calc(var(--fs-normal) *1.25);
+    /* 16 * 0.75  = 12*/
+    --fs-xxs: calc(var(--fs-normal) *.75);
+
+    /* 特殊字距 */
+    /* 16 * 3.5 = 56*/
+    --fs-big: calc(var(--fs-normal) *3.5);
+    /* 16 * 1.6  = 25.6 */
+    --fs-s-big:  calc(var(--fs-normal) *1.6);
+    /* 16 * 1.4  = 22.4 */
+    --fs-xs-big:  calc(var(--fs-normal) *1.4);
+    /* 16 * 1.15  = 18.4 */
+    --fs-normal-big:  calc(var(--fs-normal) *1.15);
+    /*
+        如果上述太過複雜，可自行調整 
+        EX: --fs-xxl: 40px; (以此類推)
+    */
+    /* 文字粗體 */
+    --fw-600: 600;
+    --fw-500: 500;
+    --fw-400: 400;
+}
+
+/* 如何導入上方總設定內容 ??
+    跟一般寫CSS差不多，在css樣式的值，使用 【 var(自定義設定) 】即可
+    EX: 
+    .text{
+        color: var(--light)
+    }
+*/

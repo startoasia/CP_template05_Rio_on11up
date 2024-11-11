@@ -1,0 +1,152 @@
+#title_s {
+    display: inline-block;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 0 28px;
+    margin-bottom: 12px;
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    line-height: var(--fs-xxl);
+}
+
+#title_l {
+    font-size: var(--fs-xxl);
+    line-height: var(--fs-big);
+    font-family: var(--fs-family-secondary);
+    color: var(--purple);
+    text-align: center;
+}
+
+#title_date {
+    color: var(--red);
+    font-weight: 400;
+    font-size: var(--fs-normal);
+    text-align: right;
+}
+
+
+p {
+    font-size: var(--fs-xs-big);
+    font-weight: 300;
+    line-height: var(--fs-xxl);
+    ;
+}
+
+.txt-big {
+    font-size: var(--fs-l);
+}
+
+.txt-xl {
+    font-size: var(--fs-m);
+}
+
+.txt-l {
+    font-size: var(--fs-s);
+}
+
+.txt-xs {
+    font-size: var(--fs-xs);
+}
+
+.txt-xxs {
+    font-size: var(--fs-normal);
+}
+
+.txt-bold {
+    font-weight: bold;
+}
+
+.txt-weight-500 {
+    font-weight: var(--fw-500);
+}
+
+@media (max-width:768px) {
+    #title_s {
+        font-size: var(--fs-normal);
+        padding: 0 20px;
+        line-height: 35px;
+    }
+
+    #title_l {
+        font-size: var(--fs-s-big);
+        line-height: var(--fs-xl);
+    }
+
+    #title_date {
+        font-size: var(--fs-xxs);
+    }
+
+    p {
+        font-size: var(--fs-normal-big);
+        text-align: justify;
+        font-weight: var(--fw-400);
+    }
+
+    .txt-big {
+        font-size: var(--fs-m);
+    }
+
+    .txt-xl {
+        font-size: var(--fs-xs-big);
+    }
+
+    .txt-xs {
+        font-size: var(--fs-normal);
+    }
+
+    .txt-xxs {
+        font-size: var(--fs-xxs);
+    }
+
+}
+
+/*------------------------------------*\
+    $顏色設定
+\*------------------------------------*/
+
+.txt-pink {
+    color: var(--pink);
+}
+
+.txt-red {
+    color: var(--red);
+}
+
+.txt-blue {
+    color: var(--blue);
+}
+
+.txt-lightBlue {
+    color: var(--blue-second)
+}
+
+.txt-gray {
+    color: var(--gray);
+}
+
+.txt-dark {
+    color: var(--dark);
+}
+
+.txt-green {
+    color: var(--green);
+}
+
+.bg-yellow {
+    background: var(--yellow);
+}
+
+.bg-pink {
+    background: var(--pink);
+    color: var(--light);
+}
+
+.bg-blue {
+    background: var(--blue);
+    color: var(--light);
+}
+
+.bg-red {
+    background: var(--special-red);
+    color: var(--light);
+}
